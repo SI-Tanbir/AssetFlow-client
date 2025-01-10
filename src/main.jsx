@@ -5,8 +5,13 @@ import {
 import { createRoot } from "react-dom/client";
 import { router } from "./Router/PublicRoutes";
 import './index.css'
+import AuthContext from "./Provider/AuthContext";
 
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+
+  <AuthContext>
+
+    <RouterProvider router={router} />
+  </AuthContext>
 );

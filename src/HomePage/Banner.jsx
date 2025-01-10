@@ -22,7 +22,7 @@ const Banner = () => (
         <div className="hero  min-h-screen text-white">
           <div className="hero-content text-center">
             <div className="max-w-md">
-              <button className="btn text-3xl   btn-primary">Join as HR Mannager</button>
+              <Link to={'/hr-join'} className="btn text-3xl   btn-primary">Join as HR Mannager</Link>
             </div>
           </div>
         </div>

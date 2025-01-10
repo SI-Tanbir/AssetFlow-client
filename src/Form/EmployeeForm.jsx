@@ -1,12 +1,48 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import  { MyContext } from "../Provider/AuthContext";
 
 const JoinAsEmployee = () => {
+
+  const {signUp}=useContext(MyContext)
+
+  
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  // console.log(signUp)
   const onSubmit = (data) => {
     console.log("Form submitted", data);
+    const email =data.email;
+    const password=data.password;
+
+    console.log(email,password)
+
+
+    //adding firebase signup
+
+  signUp(email,password)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    console.log(user)
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage)
+    // ..
+  });
+  
+
+
+
   };
+
+
+  
+
+
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">

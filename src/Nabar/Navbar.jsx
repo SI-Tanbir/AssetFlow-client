@@ -1,19 +1,47 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useContext } from "react";
+import { Link, useSearchParams } from "react-router";
+import { MyContext } from "../Provider/AuthContext";
 
 const Navbar = () => {
 
-    const navli=<>
-       <li><a href="#">Home</a></li>
+  const {test,user,signOutFirebase}=useContext(MyContext)
+  console.log(test)
+  const handleSignout=()=>{
+    // e.preventDefault()
+    signOutFirebase()
+    .then(
+      console.log("success full signout")
+    ).catch((error) => {
+      // An error happened.
+      console.log(error)
+    });
+
+  }
+
+
+
+    const navli=
+    
+    <>
+       <li><Link to={'/'}>Home</Link></li>
           <li><Link to={'/employee-join'}>Join as Employee</Link></li>
-          <li><a href="#">Join as HR Manager</a></li>
-          <li><a href="#">Login</a></li>
+          <li><Link to={'/hr-join'}>Join as HR</Link></li>
+
+          {  user ?
+                     <li><button onClick={handleSignout}  >Signout</button></li>
+                     :
+                     <li><Link to={'/login'} >Login</Link></li>
+                     }
+          {/* <li><Link to={'login'} >Login</Link></li> */}
     </>
+
+
+
   return (
     <div className="navbar bg-base-100 shadow-lg">
       <div className="flex-1">
         <a href="#" className="btn btn-ghost normal-case text-xl">
-          AMS Company
+          AssetFlow
         </a>
       </div>
       <div className="flex-none hidden lg:flex">

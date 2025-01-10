@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { MyContext } from "../Provider/AuthContext";
 
 const LoginForm = () => {
   const {
@@ -8,12 +9,30 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm();
 
+  const{signIn} =useContext(MyContext)
+  // console.log(signIn)
+
   const onSubmit = (data) => {
     
-    console.log("Form submitted", data);
+    console.log("Form submitted", data.email,data.password);
 
+    const email =data.email;
+    const password=data.password;
+    signIn(email,password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log(user)
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorMessage)
+    });
+  
 
-    console.log('getting file data',data.CompanyLogo[0]) //getting file to data from for future update the imgae url from bbimage
+    // console.log('getting file data',data.CompanyLogo[0]) //getting file to data from for future update the imgae url from bbimage
   };
 
 //   var form = new FormData();
