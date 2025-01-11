@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
+import { 
+  LayoutDashboard, 
+  Package, 
+  Users, 
+  ClipboardList, 
+  UserPlus, 
+  ListPlus,
+  Home,
+  Building
+} from 'lucide-react';
 
 const Dashboard_layout = () => {
   const isAdmin = false;
-
-  // State to track active item
   const [activeItem, setActiveItem] = useState('');
 
   return (
@@ -21,73 +29,104 @@ const Dashboard_layout = () => {
           <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
             {/* Sidebar content here */}
             <li className="text-purple-600 text-3xl border-b border-b-gray-500 p-4">
+              <Building className="w-8 h-8 inline-block mr-2" />
               XYZ Company
             </li>
 
             {isAdmin ? (
               <>
                 <li
-                  className={`p-2 ${activeItem === 'adminHome' ? 'bg-purple-600  text-white' : ''}`}
+                  className={`p-2 ${activeItem === 'adminHome' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('adminHome')}
                 >
-                  <a>Admin Home</a>
+                  <a>
+                    <LayoutDashboard className="w-5 h-5 mr-2" />
+                    Admin Home
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'assetList' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('assetList')}
                 >
-                  <a>Asset List</a>
+                  <a>
+                    <Package className="w-5 h-5 mr-2" />
+                    Asset List
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'addAsset' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('addAsset')}
                 >
-                  <a>Add Asset</a>
+                  <a>
+                    <ListPlus className="w-5 h-5 mr-2" />
+                    Add Asset
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'allRequests' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('allRequests')}
                 >
-                  <a>All Requests</a>
+                  <a>
+                    <ClipboardList className="w-5 h-5 mr-2" />
+                    All Requests
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'employeeList' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('employeeList')}
                 >
-                  <a>My Employee List</a>
+                  <a>
+                    <Users className="w-5 h-5 mr-2" />
+                    My Employee List
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'addEmployee' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('addEmployee')}
                 >
-                  <a>Add Employee</a>
+                  <a>
+                    <UserPlus className="w-5 h-5 mr-2" />
+                    Add Employee
+                  </a>
                 </li>
               </>
             ) : (
               <>
-             <li className={`p-2 ${activeItem == 'home' ? 
-              'bg-purple-500 text-white' :''}`}
-              onClick={() => setActiveItem('home')}
-              >
-                  <a>Home</a>
+                <li 
+                  className={`p-2 ${activeItem === 'home' ? 'bg-purple-500 text-white' : ''}`}
+                  onClick={() => setActiveItem('home')}
+                >
+                  <a>
+                    <Home className="w-5 h-5 mr-2" />
+                    Home
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'myAssets' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('myAssets')}
                 >
-                  <a>My Assets</a>
+                  <a>
+                    <Package className="w-5 h-5 mr-2" />
+                    My Assets
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'myTeam' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('myTeam')}
                 >
-                  <a>My Team</a>
+                  <a>
+                    <Users className="w-5 h-5 mr-2" />
+                    My Team
+                  </a>
                 </li>
                 <li
                   className={`p-2 ${activeItem === 'requestAsset' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('requestAsset')}
                 >
-                  <a>Request Asset</a>
+                  <a>
+                    <ClipboardList className="w-5 h-5 mr-2" />
+                    Request Asset
+                  </a>
                 </li>
               </>
             )}
