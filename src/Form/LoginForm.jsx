@@ -1,8 +1,12 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { MyContext } from "../Provider/AuthContext";
+import { useNavigate } from "react-router";
+import { toast, ToastContainer } from "react-toastify";
 
 const LoginForm = () => {
+  // const notify = () => ;
+  const navigate=useNavigate()
   const {
     register,
     handleSubmit,
@@ -20,15 +24,23 @@ const LoginForm = () => {
     const password=data.password;
     signIn(email,password)
     .then((userCredential) => {
+
+      // succfull login taots
+      toast.success("Successful login!")
+
       // Signed in 
       const user = userCredential.user;
       console.log(user)
+      navigate('/dashboard')
       // ...
     })
+
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorMessage)
+      console.log(errorMessage)    
+       toast.error(`error :-${errorMessage}`)
+
     });
   
 
@@ -46,7 +58,9 @@ const LoginForm = () => {
         </h2>
 
         {/* Form Section */}
-        <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+        <form  className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+        <ToastContainer />
+
       
 
 

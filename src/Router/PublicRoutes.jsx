@@ -3,6 +3,8 @@ import App from "../Layouts/App";
 import JoinAsEmployee from "../Form/EmployeeForm";
 import HrManagerFrom from "../Form/HrManagerFrom";
 import LoginForm from "../Form/LoginForm";
+import Dashboard_layout from "../Dashboard/Dashboard_layout";
+
 
 export let router = createBrowserRouter([
   {
@@ -20,5 +22,9 @@ export let router = createBrowserRouter([
   {
     path:'/login',
     element:<LoginForm></LoginForm>
+  },
+  {
+    path:'/dashboard',
+    element:<Dashboard_layout></Dashboard_layout>
   }
 ]);

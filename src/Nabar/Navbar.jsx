@@ -27,8 +27,29 @@ const Navbar = () => {
           <li><Link to={'/employee-join'}>Join as Employee</Link></li>
           <li><Link to={'/hr-join'}>Join as HR</Link></li>
 
-          {  user ?
+          {  user ? 
+          <>
+                 
+
+
+ 
+                    <li><button   > My Assets</button></li>
+
+                     
+                    <li><button   >My Team</button></li>
+
+                     
+                    <li><button   >Request for an Asset</button></li>
+
+                       
+                    <li><button   >Profile</button></li>
+
+
                      <li><button onClick={handleSignout}  >Signout</button></li>
+
+
+
+                    </>
                      :
                      <li><Link to={'/login'} >Login</Link></li>
                      }
@@ -40,6 +61,9 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-lg">
       <div className="flex-1">
+
+        {/* todo: company logo will be added if user give company name */}
+
         <a href="#" className="btn btn-ghost normal-case text-xl">
           AssetFlow
         </a>

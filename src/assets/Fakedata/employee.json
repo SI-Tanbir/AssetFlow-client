@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "fullName": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "dateOfBirth": "1990-05-10",
+        "profilePicture": "alice.jpg",
+        "company": "TechCorp"
+    },
+    {
+        "id": 2,
+        "fullName": "Bob Smith",
+        "email": "bob.smith@example.com",
+        "dateOfBirth": "1988-11-22",
+        "profilePicture": "bob.jpg",
+        "company": null
+    },
+    {
+        "id": 3,
+        "fullName": "Carol Lee",
+        "email": "carol.lee@example.com",
+        "dateOfBirth": "1995-02-15",
+        "profilePicture": "carol.jpg",
+        "company": "BuildSoft"
+    },
+    {
+        "id": 4,
+        "fullName": "David Clark",
+        "email": "david.clark@example.com",
+        "dateOfBirth": "1992-07-09",
+        "profilePicture": "david.jpg",
+        "company": "TechCorp"
+    },
+    {
+        "id": 5,
+        "fullName": "Eve Turner",
+        "email": "eve.turner@example.com",
+        "dateOfBirth": "1998-10-23",
+        "profilePicture": "eve.jpg",
+        "company": "BuildSoft"
+    },
+    {
+        "id": 6,
+        "fullName": "Frank Harris",
+        "email": "frank.harris@example.com",
+        "dateOfBirth": "1985-01-17",
+        "profilePicture": "frank.jpg",
+        "company": null
+    },
+    {
+        "id": 7,
+        "fullName": "Grace Hill",
+        "email": "grace.hill@example.com",
+        "dateOfBirth": "1993-05-30",
+        "profilePicture": "grace.jpg",
+        "company": "TechCorp"
+    },
+    {
+        "id": 8,
+        "fullName": "Henry Moore",
+        "email": "henry.moore@example.com",
+        "dateOfBirth": "1987-08-05",
+        "profilePicture": "henry.jpg",
+        "company": null
+    },
+    {
+        "id": 9,
+        "fullName": "Ivy Scott",
+        "email": "ivy.scott@example.com",
+        "dateOfBirth": "1991-12-12",
+        "profilePicture": "ivy.jpg",
+        "company": "BuildSoft"
+    },
+    {
+        "id": 10,
+        "fullName": "Jack White",
+        "email": "jack.white@example.com",
+        "dateOfBirth": "1996-03-18",
+        "profilePicture": "jack.jpg",
+        "company": "TechCorp"
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "type": "Returnable",
+        "quantity": 10,
+        "availability": "Available",
+        "dateAdded": "2025-01-01"
+    },
+    {
+        "id": 2,
+        "name": "Keyboard",
+        "type": "Returnable",
+        "quantity": 15,
+        "availability": "Available",
+        "dateAdded": "2025-01-02"
+    },
+    {
+        "id": 3,
+        "name": "Mouse",
+        "type": "Returnable",
+        "quantity": 20,
+        "availability": "Available",
+        "dateAdded": "2025-01-03"
+    },
+    {
+        "id": 4,
+        "name": "Chair",
+        "type": "Returnable",
+        "quantity": 5,
+        "availability": "Available",
+        "dateAdded": "2025-01-04"
+    },
+    {
+        "id": 5,
+        "name": "Desk",
+        "type": "Returnable",
+        "quantity": 7,
+        "availability": "Available",
+        "dateAdded": "2025-01-05"
+    },
+    {
+        "id": 6,
+        "name": "Pen",
+        "type": "Non-returnable",
+        "quantity": 100,
+        "availability": "Available",
+        "dateAdded": "2025-01-06"
+    },
+    {
+        "id": 7,
+        "name": "Notebook",
+        "type": "Non-returnable",
+        "quantity": 50,
+        "availability": "Available",
+        "dateAdded": "2025-01-07"
+    },
+    {
+        "id": 8,
+        "name": "Tissue Paper",
+        "type": "Non-returnable",
+        "quantity": 200,
+        "availability": "Available",
+        "dateAdded": "2025-01-08"
+    }
+]

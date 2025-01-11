@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "fullName": "Carla Davis",
+        "companyName": "TechCorp",
+        "companyLogo": "techcorp_logo.jpg",
+        "email": "carla.davis@techcorp.com",
+        "password": "securepassword1",
+        "package": "10 Members for $8"
+    },
+    {
+        "id": 2,
+        "fullName": "Mark Wilson",
+        "companyName": "BuildSoft",
+        "companyLogo": "buildsoft_logo.jpg",
+        "email": "mark.wilson@buildsoft.com",
+        "password": "securepassword2",
+        "package": "5 Members for $5"
+    }
+]

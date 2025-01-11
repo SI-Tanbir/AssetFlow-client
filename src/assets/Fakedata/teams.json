@@ -1,0 +1,20 @@
+[
+    {
+      "teamName": "TechCorp Development",
+      "members": [
+        { "id": 1, "name": "Alice Johnson", "role": "Employee" },
+        { "id": 4, "name": "David Clark", "role": "Employee" },
+        { "id": 7, "name": "Grace Hill", "role": "Employee" },
+        { "id": 10, "name": "Jack White", "role": "Employee" }
+      ]
+    },
+    {
+      "teamName": "BuildSoft Engineering",
+      "members": [
+        { "id": 3, "name": "Carol Lee", "role": "Employee" },
+        { "id": 5, "name": "Eve Turner", "role": "Employee" },
+        { "id": 9, "name": "Ivy Scott", "role": "Employee" }
+      ]
+    }
+  ]
+  
