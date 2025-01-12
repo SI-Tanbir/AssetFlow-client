@@ -7,8 +7,10 @@ import {
   UserPlus, 
   ListPlus,
   Home,
-  Building
+  Building,
+  Link
 } from 'lucide-react';
+import { NavLink, Outlet } from 'react-router';
 
 const Dashboard_layout = () => {
   const isAdmin = false;
@@ -20,6 +22,10 @@ const Dashboard_layout = () => {
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
           {/* Page content here */}
+
+          <Outlet></Outlet>
+
+          
           <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
             Open drawer
           </label>
@@ -102,14 +108,16 @@ const Dashboard_layout = () => {
                   </a>
                 </li>
                 <li
-                  className={`p-2 ${activeItem === 'myAssets' ? 'bg-purple-600 text-white' : ''}`}
+                  className={` p-2 ${activeItem === 'myAssets' ? 'bg-purple-600 text' : ''}`}
                   onClick={() => setActiveItem('myAssets')}
                 >
-                  <a>
+                  <NavLink to={'/dashboard/myasset'} className='bg-gray-300'>
                     <Package className="w-5 h-5 mr-2" />
                     My Assets
-                  </a>
+                  </NavLink>
                 </li>
+
+                
                 <li
                   className={`p-2 ${activeItem === 'myTeam' ? 'bg-purple-600 text-white' : ''}`}
                   onClick={() => setActiveItem('myTeam')}

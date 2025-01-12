@@ -4,6 +4,9 @@ import JoinAsEmployee from "../Form/EmployeeForm";
 import HrManagerFrom from "../Form/HrManagerFrom";
 import LoginForm from "../Form/LoginForm";
 import Dashboard_layout from "../Dashboard/Dashboard_layout";
+import MyAssets from "../Dashboard/MyAssetPages";
+import RequestAsset from "../Dashboard/RequestAsset";
+
 
 
 export let router = createBrowserRouter([
@@ -25,6 +28,16 @@ export let router = createBrowserRouter([
   },
   {
     path:'/dashboard',
-    element:<Dashboard_layout></Dashboard_layout>
+    element:<Dashboard_layout></Dashboard_layout>,
+    children:[{
+      path:'/dashboard/myasset',
+      element:<MyAssets></MyAssets>
+    },
+    {
+      path:'myrequest',
+      element:<RequestAsset></RequestAsset>
+    }
+  ]
   }
+  
 ]);
