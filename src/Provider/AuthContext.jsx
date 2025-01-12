@@ -16,6 +16,7 @@ const AuthContext = ({ children }) => {
 
   // const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [email,setEmail]=useState('')
 
   const [user, setUser] = useState(false);
 
@@ -31,6 +32,10 @@ const AuthContext = ({ children }) => {
         // User is signed in
         console.log("User signed in:", user);
 
+        //adding email to use it for dashboard api send to admin check
+        setEmail(user?.email)
+
+        
           baseUrl.post(`/jwt?email=${user?.email}`)
           .then(res=> {
             const token=res?.data?.token
@@ -69,7 +74,8 @@ const signOutFirebase=()=>{
   return (
 
     <div>
-      <MyContext.Provider value={{ test, signUp,  user, signIn ,signOutFirebase }}>
+      <MyContext.Provider value={{ 
+        test, signUp,  user, signIn ,signOutFirebase,email }}>
         {children}
       </MyContext.Provider>
     </div>

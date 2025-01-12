@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "fullName": "Carla Davis",
         "companyName": "TechCorp",
         "companyLogo": "techcorp_logo.jpg",
@@ -9,7 +8,6 @@
         "package": "10 Members for $8"
     },
     {
-        "id": 2,
         "fullName": "Mark Wilson",
         "companyName": "BuildSoft",
         "companyLogo": "buildsoft_logo.jpg",
