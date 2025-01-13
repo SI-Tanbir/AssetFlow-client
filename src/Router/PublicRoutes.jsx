@@ -9,8 +9,11 @@ import RequestAsset from "../Dashboard/employee/RequestAsset";
 import MyTeamPage from "../Dashboard/employee/TeamPage";
 import EmployeeDashboard from "../Dashboard/employee/Dashboard_home";
 import HRHomePage from "../Dashboard/Admin/HRHomePage";
-import AssetList from "../Dashboard/Admin/AssetList";
 import AllRequestsPage from "../Dashboard/Admin/AllRequest";
+import AssetsList from "../Dashboard/Admin/AssetsList";
+import AddAssets from "../Dashboard/Admin/AddAssets";
+import EmployeeList from "../Dashboard/Admin/EmployeeList";
+import PendingEmployeeList from "../Dashboard/Admin/PendingEmployeeList";
 
 
 
@@ -61,12 +64,28 @@ export let router = createBrowserRouter([
     },
     {
       path:'assetlist',
-      element:<AssetList></AssetList>
+      element:<AssetsList></AssetsList>
     },
     {
       path:'allrequest',
       element:<AllRequestsPage></AllRequestsPage>
+    },
+    {
+      path:'add-assets',
+      element:<AddAssets></AddAssets>
     }
+    ,
+    {
+      path:'employeelist',
+      element:<EmployeeList></EmployeeList>
+    }
+    ,
+    {
+      path:'pending-employeelist',
+      element:<PendingEmployeeList></PendingEmployeeList>
+    }
+
+  
   ]
   }
   
