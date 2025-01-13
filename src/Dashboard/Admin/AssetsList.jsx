@@ -18,15 +18,20 @@ const AssetsList = () => {
       });
   }, []);
 
+
+
   const filteredAssets = data.filter(asset => {
     // Case insensitive search filter
-    const searchFilter = asset.assetName.toLowerCase().includes(searchQuery.toLowerCase());
+    const searchFilter = asset.assetName?.toLowerCase().includes(searchQuery.toLowerCase());
 
     // Type filter logic
     const matchesType = typeFilter === 'all' || asset.assetType.toLowerCase() === typeFilter.toLowerCase();
 
     return matchesType && searchFilter;
   });
+
+
+  
 
   const handlePrint = (asset) => {
     // Implement print functionality
